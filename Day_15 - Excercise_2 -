@@ -1,0 +1,23 @@
+# # according to the time stamp, Good Morning, Good Afternoon, Good Evening
+# import time
+# timestamp = int(time.strftime('%H:%M:%S'))
+# print(timestamp)
+
+import time
+a = input("What is your name: ")
+print(a)
+# Get the current time as a string in "HH:MM:SS" format
+current_time = time.strftime('%H:%M:%S')
+hour = int(current_time.split(":")[0])
+
+if (hour >= 5 and hour <= 11):
+    print("Good Morning", a)
+    print("You are very busy now")
+elif(hour >= 12 and hour <= 17):
+    print("Good Afternoon", a)
+    print("Can we go for a lunch?")
+elif(hour >= 18 and hour <= 22):
+    print("Good Evening", a)
+    print("can we go for a walk?")
+else:
+    print("Good Night", a)
