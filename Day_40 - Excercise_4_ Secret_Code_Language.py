@@ -16,32 +16,32 @@
 import numpy as np
 import random
 import string
-print("WELCOME to the secret services game!!")
-program = input("You want to perform coding or decoding: ")
-language = input("Enter your language word ")
 
 random_chars = ''.join(random.choice(string.ascii_letters) for _ in range(3))
-#print(random_chars)
+print("WELCOME to the secret services game!!")
+language = input("Enter your language word ")
+program = input("You want to perform coding or decoding: ")
+if program == "coding":
+    def coding():
+        if len(language) < 3:
+            a = language[1:]
+            b = a + language[0]
+            c = b + random_chars
+            del a
+            print(c)
+        else:
+            cd =language[::-1]
+            print(cd)
+    coding()
 
-def coding():
-    if len(language) < 3:
-        a = language[1:]
-        b = a + language[0]
-        c = b + random_chars
-        del a
-        print(c)
-    else:
-        cd =language[::-1]
-        print(cd)
-coding()
-
-def decoding():
-    if len(language) < 3:
-        print(language[::-1])
-    else:
-        d = language[0:3]
-        e = d[0:2]
-        f = d[-1]
-        g = f + e
-        print(g)
-decoding()
+else:
+    def decoding():
+        if len(language) < 3:
+            print(language[::-1])
+        else:
+            d = language[0:3]
+            e = d[0:2]
+            f = d[-1]
+            g = f + e
+            print(g)
+    decoding()
