@@ -1,14 +1,27 @@
-# Reading_a_file
-# f = open("myfile.txt", "r") # r = read
-# text = f.read()
-# print(text)
-# f.close()
+# f = open('myfile.txt', 'r')
+# while True:
+#     line = f.readline()
+#     if not line:
+#         break
+#     print(line)
 
-# # Writing_a_file
-# z = open("myfile.txt", "w")
-# z.write("hello world")
-# z.close()
+# f = open('myfile2.txt', 'r')
+# i = 0
+# while True:
+#     i = i + 1
+#     line = f.readline()
+#     if not line:
+#         break
+#     m1 = int(line.split(",")[0])
+#     m2 = int(line.split(",")[1])
+#     m3 = int(line.split(",")[2])
+#     print(f"Marks of students {i} in Maths is: {m1*2}")
+#     print(f"Marks of student {i} in English is: {m2*2}")
+#     print(f"MArks of student {i} in SST is: {m3*2}")
+     
+#     print(line)
 
-## using wiht statement
-with open("myfile.txt", "a") as f:
-    f.write("Hey i am inside with")
+f = open('myfile2.txt', 'w')
+lines = ['line 1\n', 'line 2\n', 'line 3\n']
+f.writelines(lines)
+f.close()
